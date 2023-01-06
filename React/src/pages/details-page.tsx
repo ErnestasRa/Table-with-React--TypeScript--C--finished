@@ -8,8 +8,12 @@ import {
   Button,
 } from '@mui/material';
 
-const DetailsPage:React.FC = () => {
-  const [singleDesert, setSingleDesert] = React.useState<any>([]);
+type SingleDesertType = {
+  [key: string]: any | number;
+};
+
+const DetailsPage: React.FC = () => {
+  const [singleDesert, setSingleDesert] = React.useState<SingleDesertType>([]);
   const { id } = useParams();
   const navigate = useNavigate();
 

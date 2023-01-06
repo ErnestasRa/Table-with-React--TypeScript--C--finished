@@ -3,7 +3,7 @@ import post from 'functions/http';
 import { useNavigate } from 'react-router-dom';
 import NewDesertForm from 'components/desert-form/new-desert-form';
 
-type NewDesertInputsType = {
+type NewDesertRefType = {
   current: HTMLInputElement | null
 };
 
@@ -16,11 +16,11 @@ type NewDesertInputType = {
 };
 
 const NewRecordForm: React.FC = () => {
-  const nameRef: NewDesertInputsType = React.useRef(null);
-  const caloriesRef: NewDesertInputsType = React.useRef(null);
-  const fatRef: NewDesertInputsType = React.useRef(null);
-  const carbsRef: NewDesertInputsType = React.useRef(null);
-  const proteinRef: NewDesertInputsType = React.useRef(null);
+  const nameRef: NewDesertRefType = React.useRef(null);
+  const caloriesRef: NewDesertRefType = React.useRef(null);
+  const fatRef: NewDesertRefType = React.useRef(null);
+  const carbsRef: NewDesertRefType = React.useRef(null);
+  const proteinRef: NewDesertRefType = React.useRef(null);
   const navigate = useNavigate();
 
   const createNewDesert = async () => {
